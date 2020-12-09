@@ -16,14 +16,17 @@ def read_input(file_name):
 
 
 def calculate(numbers):
-
     for x in numbers:
         number1 = x
         for y in reversed(numbers):
             number2 = y
-            if (number1 + number2) == 2020:
+            if (number1 + number2) > 2020:
+                break
+            elif (number1 + number2) == 2020:
                 ans = number1*number2
                 return ans
 
 
 main()
+
+
