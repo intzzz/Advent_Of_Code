@@ -20,14 +20,17 @@ def calculate(numbers):
     for i in range(len(numbers)):
         number1 = numbers[i]
         for k in range(len(numbers)):
-            number2 = numbers[k + 1]
             if k + 1 >= size - 1:
                 break
+            number2 = numbers[k + 1]
             for j in range(len(numbers)):
-                number3 = numbers[j + 2]
                 if j + 2 >= size - 1:
                     break
-                if number1 + number2 + number3 == 2020:
+                number3 = numbers[j + 2]
+                addition = number1 + number2 + number3
+                if addition > 2020:
+                    break
+                elif addition == 2020:
                     return number1*number2*number3
 
 
